@@ -1,0 +1,67 @@
+2024-11-26 14:09:13.673 EET [6345] LOG:  starting PostgreSQL 17.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20231218 (Red Hat 11.4.1-3.0.1), 64-bit
+2024-11-26 14:09:13.674 EET [6345] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-11-26 14:09:13.674 EET [6345] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2024-11-26 14:09:13.674 EET [6345] WARNING:  could not create listen socket for "localhost"
+2024-11-26 14:09:13.675 EET [6345] FATAL:  could not create any TCP/IP sockets
+2024-11-26 14:09:13.677 EET [6345] LOG:  database system is shut down
+2024-11-26 14:09:33.676 EET [6371] LOG:  starting PostgreSQL 17.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20231218 (Red Hat 11.4.1-3.0.1), 64-bit
+2024-11-26 14:09:33.676 EET [6371] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-26 14:09:33.688 EET [6371] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-11-26 14:09:33.701 EET [6374] LOG:  database system was shut down at 2024-11-26 14:09:02 EET
+2024-11-26 14:09:33.709 EET [6371] LOG:  database system is ready to accept connections
+2024-11-26 14:10:08.510 EET [6415] ERROR:  relation "xxx" does not exist at character 13
+2024-11-26 14:10:08.510 EET [6415] STATEMENT:  insert into xxx values('ff');
+2024-11-26 14:10:22.855 EET [6415] ERROR:  syntax error at or near "pgq" at character 16
+2024-11-26 14:10:22.855 EET [6415] STATEMENT:  insert into xx pgq values('ff');
+2024-11-26 14:14:33.802 EET [6372] LOG:  checkpoint starting: time
+2024-11-26 14:14:40.705 EET [6372] LOG:  checkpoint complete: wrote 71 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.841 s, sync=0.032 s, total=6.904 s; sync files=30, longest=0.016 s, average=0.002 s; distance=383 kB, estimate=383 kB; lsn=0/159E228, redo lsn=0/159E198
+2024-11-26 16:24:37.521 EET [6371] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-11-26 16:24:37.521 EET [6371] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-11-26 16:24:37.521 EET [6371] LOG:  received immediate shutdown request
+2024-11-26 16:24:37.521 EET [6371] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-11-26 16:24:37.527 EET [6371] LOG:  database system is shut down
+2024-11-26 16:25:03.450 EET [49623] LOG:  starting PostgreSQL 17.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20231218 (Red Hat 11.4.1-3.0.1), 64-bit
+2024-11-26 16:25:03.450 EET [49623] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-26 16:25:03.463 EET [49623] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-11-26 16:25:03.476 EET [49626] LOG:  database system was shut down at 2024-11-26 16:24:51 EET
+2024-11-26 16:25:03.484 EET [49623] LOG:  database system is ready to accept connections
+2024-11-26 16:26:04.649 EET [49635] ERROR:  relation "xxx" does not exist at character 15
+2024-11-26 16:26:04.649 EET [49635] STATEMENT:  select * from xxx;
+2024-11-26 16:26:14.036 EET [49635] WARNING:  there is no transaction in progress
+2024-11-26 16:30:03.486 EET [49624] LOG:  checkpoint starting: time
+2024-11-26 16:30:10.385 EET [49624] LOG:  checkpoint complete: wrote 71 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.845 s, sync=0.026 s, total=6.900 s; sync files=30, longest=0.016 s, average=0.001 s; distance=383 kB, estimate=383 kB; lsn=0/159E368, redo lsn=0/159E2D8
+2024-11-27 15:32:35.995 EET [18676] LOG:  starting PostgreSQL 17.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20231218 (Red Hat 11.4.1-3.0.1), 64-bit
+2024-11-27 15:32:35.995 EET [18676] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-27 15:32:36.008 EET [18676] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-11-27 15:32:36.021 EET [18679] LOG:  database system was shut down at 2024-11-27 15:32:26 EET
+2024-11-27 15:32:36.029 EET [18676] LOG:  database system is ready to accept connections
+2024-11-27 15:35:26.606 EET [18699] WARNING:  there is no transaction in progress
+2024-11-27 15:36:42.515 EET [18699] ERROR:  syntax error at or near "PGQs" at character 8
+2024-11-27 15:36:42.515 EET [18699] STATEMENT:  insert PGQs xxx values('e');
+2024-11-27 15:37:36.051 EET [18677] LOG:  checkpoint starting: time
+2024-11-27 15:37:42.940 EET [18677] LOG:  checkpoint complete: wrote 71 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.838 s, sync=0.025 s, total=6.890 s; sync files=30, longest=0.016 s, average=0.001 s; distance=383 kB, estimate=383 kB; lsn=0/159E538, redo lsn=0/159E4A8
+2024-11-27 15:39:05.663 EET [18699] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2024-11-27 15:39:05.663 EET [18699] STATEMENT:  SELECT backend_xid FROM pg_stat_activity WHERE backend_xid IS NOT NULL;
+2024-11-27 15:42:37.026 EET [18677] LOG:  checkpoint starting: time
+2024-11-27 15:42:37.159 EET [18677] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.007 s, total=0.134 s; sync files=1, longest=0.007 s, average=0.007 s; distance=0 kB, estimate=345 kB; lsn=0/159E7C8, redo lsn=0/159E770
+2024-11-27 15:52:37.360 EET [18677] LOG:  checkpoint starting: time
+2024-11-27 15:52:37.396 EET [18677] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.007 s, total=0.037 s; sync files=1, longest=0.007 s, average=0.007 s; distance=0 kB, estimate=311 kB; lsn=0/159E930, redo lsn=0/159E8D8
+2024-11-27 15:54:13.425 EET [18676] LOG:  received fast shutdown request
+2024-11-27 15:54:13.439 EET [18676] LOG:  aborting any active transactions
+2024-11-27 15:54:13.439 EET [18790] FATAL:  terminating connection due to administrator command
+2024-11-27 15:54:13.441 EET [18676] LOG:  background worker "logical replication launcher" (PID 18682) exited with exit code 1
+2024-11-27 15:54:13.441 EET [18677] LOG:  shutting down
+2024-11-27 15:54:13.450 EET [18677] LOG:  checkpoint starting: shutdown immediate
+2024-11-27 15:54:13.474 EET [18677] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.033 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=279 kB; lsn=0/159E9E0, redo lsn=0/159E9E0
+2024-11-27 15:54:13.478 EET [18676] LOG:  database system is shut down
+2024-11-27 15:55:27.653 EET [20064] LOG:  starting PostgreSQL 17.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20231218 (Red Hat 11.4.1-3.0.1), 64-bit
+2024-11-27 15:55:27.653 EET [20064] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-11-27 15:55:27.666 EET [20064] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-11-27 15:55:27.679 EET [20067] LOG:  database system was shut down at 2024-11-27 15:54:55 EET
+2024-11-27 15:55:27.686 EET [20064] LOG:  database system is ready to accept connections
+2024-11-27 15:57:26.917 EET [20081] ERROR:  syntax error at or near "insert" at character 7
+2024-11-27 15:57:26.917 EET [20081] STATEMENT:  begin
+	insert into xxx values('b');
+2024-11-27 15:57:49.500 EET [20081] WARNING:  there is no transaction in progress
+2024-11-27 16:00:27.685 EET [20065] LOG:  checkpoint starting: time
+2024-11-27 16:00:34.575 EET [20065] LOG:  checkpoint complete: wrote 71 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.832 s, sync=0.030 s, total=6.890 s; sync files=30, longest=0.015 s, average=0.001 s; distance=383 kB, estimate=383 kB; lsn=0/159E360, redo lsn=0/159E2D0

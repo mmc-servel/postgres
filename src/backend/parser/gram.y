@@ -797,7 +797,7 @@ static Node *makeRecursiveViewSelect(char *relname, List *aliases, Node *query);
 
 	YEAR_P YES_P
 
-	ZONE
+	ZONE PGQ
 
 /*
  * The grammar thinks these are keywords, but they are not in the kwlist.h
@@ -12138,6 +12138,16 @@ InsertStmt:
 					$5->withClause = $1;
 					$$ = (Node *) $5;
 				}
+				|
+			opt_with_clause INSERT PGQ insert_target insert_rest
+			opt_on_conflict returning_clause
+				{
+					$5->relation = $4;
+					$5->onConflictClause = $6;
+					$5->returningList = $7;
+					$5->withClause = $1;
+					$$ = (Node *) $5;
+				}
 		;
 
 /*
@@ -17719,6 +17729,7 @@ unreserved_keyword:
 			| PASSING
 			| PASSWORD
 			| PATH
+			| PGQ
 			| PLAN
 			| PLANS
 			| POLICY
@@ -18343,6 +18354,7 @@ bare_label_keyword:
 			| PASSING
 			| PASSWORD
 			| PATH
+			| PGQ
 			| PLACING
 			| PLAN
 			| PLANS

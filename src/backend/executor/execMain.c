@@ -59,7 +59,8 @@
 #include "utils/partcache.h"
 #include "utils/rls.h"
 #include "utils/snapmgr.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Hooks for plugins to get control in ExecutorStart/Run/Finish/End */
 ExecutorStart_hook_type ExecutorStart_hook = NULL;
@@ -522,6 +523,15 @@ standard_ExecutorEnd(QueryDesc *queryDesc)
 	queryDesc->estate = NULL;
 	queryDesc->planstate = NULL;
 	queryDesc->totaltime = NULL;
+
+	//if (strstr(queryDesc->sourceText, "insert pgq") != NULL) {
+	    /* ... */
+	//}
+
+	FILE *fptr;
+	fptr = fopen("tttest.txt", "a");
+	fprintf(fptr, "%s xmin=%d xmax=%d\n", queryDesc->sourceText, queryDesc->snapshot->xmin, queryDesc->snapshot->xmax);
+	fclose(fptr);
 }
 
 /* ----------------------------------------------------------------
